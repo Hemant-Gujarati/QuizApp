@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Master</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🧠 Quiz Master</h1>
+
+    <!-- 1. START SCREEN -->
+    <div id="start-screen">
+      <p>Test your knowledge! Pick a topic to begin.</p>
+      <button class="topic-btn" onclick="startQuiz('html')">HTML Quiz</button>
+      <button class="topic-btn" onclick="startQuiz('python')">Python Quiz</button>
+      <button class="topic-btn" onclick="startQuiz('general')">General Knowledge</button>
+      <p id="best-score"></p>
+    </div>
+
+    <!-- 2. QUIZ SCREEN -->
+    <div id="quiz-screen" class="hidden">
+      <div class="top-bar">
+        <span id="question-number">Question 1/5</span>
+        <span id="timer">⏱ 15</span>
+        <span id="score">Score: 0</span>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+
+      <h2 id="question-text"></h2>
+      <div id="options"></div>
+
+      <p id="feedback"></p>
+      <button id="next-btn" class="hidden" onclick="nextQuestion()">Next ➡</button>
+    </div>
+
+    <!-- 3. RESULT SCREEN -->
+    <div id="result-screen" class="hidden">
+      <h2>Quiz Finished! 🎉</h2>
+      <p id="final-score"></p>
+      <p id="message"></p>
+      <button onclick="restartQuiz()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

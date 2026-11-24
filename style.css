@@ -1,0 +1,114 @@
+/* ---------- Basic page style ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* ---------- White card in the middle ---------- */
+.container {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  color: #4a3f9f;
+  margin-top: 0;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #4a3f9f;
+  transform: scale(1.03);
+}
+
+.topic-btn {
+  display: block;
+  width: 100%;
+}
+
+/* ---------- Top bar (question no, timer, score) ---------- */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* ---------- Progress bar ---------- */
+.progress-bar {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#progress {
+  background: #4caf50;
+  height: 100%;
+  width: 0%;
+  transition: width 0.4s;
+}
+
+/* ---------- Answer options ---------- */
+#options button {
+  display: block;
+  width: 100%;
+  background: #f1f1f1;
+  color: #333;
+  text-align: left;
+  border: 2px solid #ddd;
+}
+
+#options button:hover {
+  background: #e0e0ff;
+}
+
+/* Colors used when the answer is checked */
+.correct {
+  background: #c8f7c5 !important;
+  border-color: #4caf50 !important;
+}
+
+.wrong {
+  background: #f9c6c6 !important;
+  border-color: #e53935 !important;
+}
+
+#feedback {
+  font-weight: bold;
+  min-height: 24px;
+}
+
+/* ---------- Helper class to hide things ---------- */
+.hidden {
+  display: none;
+}
